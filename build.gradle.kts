@@ -3,7 +3,7 @@ plugins {
     id("com.github.johnrengelman.shadow") version "8.1.1"
 }
 
-group = "com.snipr"
+group = "com.example"
 version = "1.0.0"
 
 repositories {
@@ -22,7 +22,7 @@ java {
 tasks {
     shadowJar {
         archiveClassifier.set("")
-        archiveBaseName.set("HomePlugin")
+        archiveBaseName.set("WelcomeMessagePlugin")
     }
     
     build {

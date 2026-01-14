@@ -1,1 +1,1 @@
-rootProject.name = "HomePlugin"
+rootProject.name = "WelcomeMessagePlugin"

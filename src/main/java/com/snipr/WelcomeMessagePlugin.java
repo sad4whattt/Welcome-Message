@@ -9,6 +9,9 @@ import com.snipr.welcomemessage.listeners.PlayerJoinListener;
 import com.hypixel.hytale.server.core.util.Config;
 
 import javax.annotation.Nonnull;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 
 /**
  * Welcome Messages - Sends custom welcome messages to players when they join the server.
@@ -33,9 +36,31 @@ public class WelcomeMessagePlugin extends JavaPlugin {
         super(init);
         instance = this;
         
+        createDefaultConfig();
+        
         this.config = this.withConfig("WelcomeMessage", WelcomeConfig.CODEC);
         
         LOGGER.atInfo().log("WelcomeMessagePlugin v" + this.getManifest().getVersion().toString() + " initialized!");
+    }
+    
+    private void createDefaultConfig() {
+        File folder = new File("mods/Snipr_WelcomeMsg");
+        File file = new File(folder, "WelcomeMessage.json");
+        
+        if (!file.exists()) {
+             folder.mkdirs();
+             try (FileWriter writer = new FileWriter(file)) {
+                 writer.write("{\n" +
+                         "  \"WelcomeMessage\": \"Welcome to the server, {player}! Enjoy your stay!\",\n" +
+                         "  \"BroadcastJoin\": true,\n" +
+                         "  \"DelaySeconds\": 0\n" +
+                         "}");
+                 LOGGER.atInfo().log("Generated default configuration at " + file.getPath());
+             } catch (IOException e) {
+                 LOGGER.atInfo().log("Failed to create default config! " + e.getMessage());
+                 e.printStackTrace();
+             }
+        }
     }
 
     @Override
