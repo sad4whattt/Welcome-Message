@@ -2,6 +2,9 @@
 
 A simple Hytale plugin that sends custom welcome messages when players join your server.
 
+## Check us out
+[Snipr](https://hytale.snipr.me/)
+
 ## What It Does
 
 - Sends a personalized welcome message to players
@@ -56,4 +59,5 @@ MIT - Use it however you want!
 ---
 
 Made by hate.bio
+
 
