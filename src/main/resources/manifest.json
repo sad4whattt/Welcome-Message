@@ -1,0 +1,8 @@
+{
+  "Group": "Snipr",
+  "Name": "WelcomeMsg",
+  "Version": "1.0.0",
+  "Main": "com.snipr.welcomemessage.WelcomeMessagePlugin",
+  "Description": "Sends a custom welcome message to players when they join the server",
+  "IncludesAssetPack": false
+}
