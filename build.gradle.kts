@@ -1,0 +1,32 @@
+plugins {
+    java
+    id("com.github.johnrengelman.shadow") version "8.1.1"
+}
+
+group = "com.example"
+version = "1.0.0"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Hytale Server API - You'll need to add the HytaleServer.jar to the libs folder
+    compileOnly(files("libs/HytaleServer.jar"))
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+tasks {
+    shadowJar {
+        archiveClassifier.set("")
+        archiveBaseName.set("WelcomeMessagePlugin")
+    }
+    
+    build {
+        dependsOn(shadowJar)
+    }
+}
