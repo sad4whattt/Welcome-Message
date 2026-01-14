@@ -55,4 +55,5 @@ MIT - Use it however you want!
 
 ---
 
-Made for learning Hytale plugin development 🎮
+Made by hate.bio
+
