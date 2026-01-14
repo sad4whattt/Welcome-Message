@@ -1,8 +1,8 @@
 {
   "Group": "Snipr",
-  "Name": "WelcomeMsg",
+  "Name": "HomePlugin",
   "Version": "1.0.0",
-  "Main": "com.snipr.welcomemessage.WelcomeMessagePlugin",
-  "Description": "Sends a custom welcome message to players when they join the server",
+  "Main": "com.snipr.homeplugin.HomePlugin",
+  "Description": "Allows players to set and teleport to their home location",
   "IncludesAssetPack": false
 }

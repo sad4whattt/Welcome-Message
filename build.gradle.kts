@@ -3,7 +3,7 @@ plugins {
     id("com.github.johnrengelman.shadow") version "8.1.1"
 }
 
-group = "com.example"
+group = "com.snipr"
 version = "1.0.0"
 
 repositories {
@@ -11,7 +11,6 @@ repositories {
 }
 
 dependencies {
-    // Hytale Server API - You'll need to add the HytaleServer.jar to the libs folder
     compileOnly(files("libs/HytaleServer.jar"))
 }
 
@@ -23,7 +22,7 @@ java {
 tasks {
     shadowJar {
         archiveClassifier.set("")
-        archiveBaseName.set("WelcomeMessagePlugin")
+        archiveBaseName.set("HomePlugin")
     }
     
     build {
