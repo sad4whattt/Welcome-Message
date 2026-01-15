@@ -24,10 +24,12 @@ The config generates at: `mods/Snipr_WelcomeMsg/WelcomeMessage.json`
 
 ```json
 {
+  "MessagePrefix": "[Server]",
   "WelcomeMessage": "Welcome to the server, {player}! Enjoy your stay!",
   "BroadcastJoin": true,
   "DelaySeconds": 0
 }
+
 ```
 
 **Options:**
@@ -59,6 +61,7 @@ MIT - Use it however you want!
 ---
 
 Made by hate.bio
+
 
 
 
